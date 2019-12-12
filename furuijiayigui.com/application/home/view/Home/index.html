@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+
+		<meta charset="utf-8">
+
+		<title>首页-芙瑞伽</title>
+
+		<meta name="description" content="芙瑞伽衣柜" />
+
+		<meta name="keywords" content="芙瑞伽衣柜" />
+
+		<meta name="renderer" content="webkit">
+		<!--360渲染模式-->
+
+		<meta name="format-detection" content="telephone=notelphone=no, email=no" />
+
+		<link rel="stylesheet" href="/public/static/home/css/reset.css">
+
+		<link rel="stylesheet" href="/public/static/home/css/common.css">
+
+		<link rel="stylesheet" href="/public/static/home/css/index.css">
+
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			var index = 0;
+			var divs;
+			var box;
+			var t;
+			var lis;
+			var arrs;
+
+			window.onload = function() {
+				divs = document.getElementById('big-b').getElementsByTagName('div'); //轮播内容
+				box = document.getElementById('box');
+				lis = document.getElementById('small-b').getElementsByTagName('li');
+
+				t = setInterval(moveNext, 2000);
+
+				for (var i = 0; i < lis.length; i++) {
+					lis[i]._index = i;
+					lis[i].onclick = function() {
+
+						lis[index].className = '';
+						divs[index].className = '';
+
+						this.className = 'sel';
+						divs[this._index].className = 'current';
+
+						index = this._index;
+					};
+				}
+			}
+
+			function moveNext() {
+				divs[index].className = '';
+				lis[index].className = '';
+				index++;
+				if (index == divs.length) {
+					index = 0;
+				}
+				divs[index].className = 'current';
+				lis[index].className = 'sel';
+			}
+
+			function movePre() {
+				divs[index].className = '';
+				lis[index].className = '';
+				index--;
+				if (index == -1) {
+					index = divs.length - 1;
+				}
+				divs[index].className = 'current';
+				lis[index].className = 'sel';
+			}
+		</script>
+		<!-- 头部 -->
+
+		{:widget("Cate/header")}
+
+		<!-- 头部end -->
+
+
+
+		<!-- 轮播 -->
+
+
+		<div class="banner">
+
+
+
+
+			<div id="box">
+				<div id="big-b">
+					{volist name="map" key="k" id="map"}
+
+					<div {if condition="$k =='1'" }class="current" {/if}> <img src="/public/uploads/{$map['img']}" alt=""></div>
+
+					{/volist}
+
+				</div>
+				<ol id="small-b">
+					{volist name="map2" key="k" id="map"}
+					<li {if condition="$k == '1'" }class="sel" {/if}> </li> {/volist} </ol> </div> </div> <!-- banner结束 -->
+
+
+
+
+
+						<!-- 产品分类部分结束 -->
+
+
+
+						<!-- 爱生活懂空间开始 -->
+
+						<div class="love-style">
+
+							<div class="wrapper">
+
+								<div class="love-style-header">
+
+									<p>爱生活 · 懂空间</p>
+
+								</div>
+
+								<div class="love-style-pic">
+
+									<ul>
+
+										{foreach name="room" item="rooms"}
+
+
+										<li>
+
+											<div class="section-item">
+
+												<a href="/home/classify" target="_blank">
+
+													<span class="section-title">{$rooms['name']}</span>
+
+													<span class="section-label">{$rooms['describe']}</span>
+
+													<img class="lazy section-img" src="/public/uploads/{$rooms['pic']}" style="display: block;">
+
+												</a>
+
+											</div>
+
+										</li>
+
+										{/foreach}
+
+
+
+									</ul>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<!-- 爱生活懂空间结束 -->
+
+
+
+						<!-- 芙瑞伽，觅好家开始 -->
+
+						<div class="meet-home">
+
+							<div class="wrapper">
+
+								<div class="meet-home-header">
+
+									<p>芙瑞伽 · 幸福家</p>
+
+								</div>
+
+								<div class="meet-home-pic">
+
+									<ul>
+
+
+
+
+
+										{foreach name="room2" item="promotion"}
+
+										<li>
+
+											<div class="section-item">
+
+												<a target="_blank" href="/home/classify">
+
+													<span class="section-title">{$promotion['name']}</span>
+
+													<span class="section-label">{$promotion['describe']}</span>
+
+
+
+													<img class="lazy section-img" src="/public/uploads/{$promotion['pic']}" style="display: block;">
+
+												</a>
+
+											</div>
+
+										</li>
+
+										{/foreach}
+
+
+
+									</ul>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<!-- 芙瑞伽，觅好家结束 -->
+
+
+
+
+
+
+
+
+
+						<!-- 案例部分开始 -->
+
+						<!--         <div class="product">
+
+            
+
+            <div class="wrapper">
+
+				<p class="tit">案例展示</p><br><br>
+
+				<p class="tit_1">product</p>
+
+					
+
+                    
+
+                    <ul class="styles">
+
+                        {foreach name="cate" item="cate"}
+
+						<li><a href="###" class="current">{$cate['name']}</a></li>
+
+					
+
+						
+
+					   {/foreach}
+
+                    </ul>
+
+					
+
+                    
+
+                                    
+
+                    <div class="pic clearfix">
+
+						
+
+                    {foreach name="exhibition" item="exhi"}
+
+                        <div class="pro1">
+
+							<img src="/public/uploads/{$exhi['pic']}" height="249" width="282" alt="">
+
+	            			<div class="cover">
+
+	                			<div class="bord">
+
+									<div class="more">
+
+									  <a href="/home/details/id/{$exhi['id']}">查看详情>></a>
+
+									</div>
+
+                				</div>
+
+            				</div>
+
+						</div>
+
+						{/foreach}
+
+                        
+
+						
+
+				  	</div>
+
+	            <div class="more">
+
+	                <a href="/home/exhibition">查看更多>></a>
+
+	            </div>
+
+      		</div>
+
+        </div> -->
+
+						<!-- 案例部分结束 -->
+
+
+
+						<!-- 新闻部分开始 -->
+
+						<div class="news">
+
+							<div class="wrapper">
+
+								<p class="tit">芙瑞伽·资讯中心</p><br>
+
+								<p class="tit_1">NEWS</p>
+
+								<div class="news-center">
+
+									<div class="news-center-left">
+
+										<div class="news-center-left-img">
+
+											<img src="/public/static/home/images/photo-10.jpg" alt="">
+
+										</div>
+
+									</div>
+
+									<div class="news-center-right">
+
+										<ul>
+
+
+
+											{foreach name="news" item="news"}
+
+											<li>
+
+												<a href="/home/newlook/id/{$news['id']}">
+													<h6 class="title1">{$news['title']}</h6>
+												</a>
+
+												<p class="title2">
+
+													{$news['content']|strip_tags|mb_substr=0,180,'utf-8'}...
+
+													<!-- 与定制企业先定制后生产不同，成品家具企业是先推出产品，再吸引消费者前来购买。成品家具在传统门店或卖场的展示方式日显老化，沿用多年的产品陈列方式，对于希望求新求变的年轻消费者，正渐渐失去吸引力。卖场门可罗雀正在成为日常经营常态。 -->
+
+												</p>
+
+												<span class="title3">{$news['time']}</span>
+
+											</li>
+
+											{/foreach}
+
+
+
+										</ul>
+
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<a href="/home/news">
+							<div class="look-more">查看更多</div>
+						</a>
+
+
+						<!-- 新闻部分结束 -->
+
+						<!-- 服务流程部分开始 -->
+
+						<!--         <div class="process">
+
+        	<div class="wrapper">
+
+				<p class="tit">服务流程</p><br><br>
+
+				<p class="tit_1">process</p>
+
+                <div class="proces clearfix">
+
+                    <div class="proce">
+
+                        <a href="###"><img src="/public/static/home/images/produce1.png" height="108" width="108" alt=""></a>
+
+                        <p><a href="###">网上预约</a></p>
+
+                    </div>
+
+                   
+                    <div class="proce">
+
+                        <a href="###"><img src="/public/static/home/images/produce6.png" height="108" width="108" alt=""></a>
+
+                        <p><a href="###">全程售后</a></p>
+
+                    </div>
+
+                </div>
+
+			</div>
+
+        </div> -->
+
+						<!-- 服务流程部分结束 -->
+
+
+
+						<!-- ABOUT开始 -->
+
+						<!--         <div class="about">
+
+            <div class="wrapper">
+
+                <p class="tit">关于我们</p><br><br>
+
+                <p class="tit_1">ABOUT US</p>
+
+                <div class="infor clearfix">
+
+                    <div class="pic fl">
+
+                        <img src="/public/static/home/images/pic1_03.jpg" alt="">
+
+                    </div>
+
+                    <div class="descr fr">
+
+                        <h3><a href="home/profile">{$ynopsis['title']}</a></h3>
+
+                        <p class="txt">
+
+                     
+
+                             {$ynopsis['content'] |mb_substr=0,400,'utf-8'}
+
+                        </p>
+
+                        
+
+                        <div class="more">
+
+                            <a href="/home/profile">了解详情>></a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div> -->
+
+						<!-- ABOUT 结束 -->
+
+						<!-- 底部开始 -->
+
+
+
+						{:widget("Cate/footer")}
+
+						<!-- 底部结束 -->
+
+						<!-- 返回顶部开始 -->
+
+						<div class="box" id="box">
+
+							<div class="back" id="back"></div>
+
+						</div>
+
+						<!-- 返回顶部结束 -->
+
+						<script src="/public/static/home/js/index.js"></script>
+			
+
+	</body>
+
+	<script>
+
+
+
+
+
+
+
+	</script>
+
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+
+          <title>案例展示</title>
+
+         <meta name="description" content="芙瑞伽衣柜" />
+
+        <meta name="keywords" content="芙瑞伽衣柜" />
+
+        <link rel="stylesheet" href="/public/static/home/css/reset.css">
+
+        <link rel="stylesheet" href="/public/static/home/css/common.css">
+
+        <link rel="stylesheet" href="/public/static/home/css/decorate-eight.css">
+
+    </head>
+
+    <body>
+
+        <!-- head开始-->
+
+        {:widget("Cate/header")}
+
+        <!-- head结束 -->
+
+        <!-- banner 开始 -->
+
+        <div class="banner">
+            
+            <img src="/public/uploads/{$nav['pic']}" alt="">
+        </div>
+
+        <!-- banner 结束 -->
+
+        <!-- show 开始 -->
+
+        <div class="show">
+
+            <div class="inner wrapper clearfix">
+
+                <div class="left fl">
+
+                    <h3>案例展示</h3>
+
+                </div>
+
+                <div class="right fr">
+
+                    <span>当前位置：<a href="/home/index">首页</a>>案例展示</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- show 结束 -->
+
+        <!--stylelist 开始  -->
+
+        
+
+        <div class="stylelist">
+
+            
+
+            
+
+
+
+            <div class="styles wrapper">
+
+                <span class="box-1 fl">风格</span>
+
+                <ul class="first clearfix">
+
+                    
+
+                    
+                 <li class="one"><a onclick="clearCookie('fengge')">全部</a></li>
+                 {volist name="cate" id="vo"}
+           
+                   
+
+                    <li {if condition="$Think.cookie.fengge == $vo.style"}class="one" {/if}><a onclick="shaixuan('fengge','{$vo.style}')">{$vo.style}</a></li>
+
+                    
+
+                 {/volist}
+
+                   
+
+                 
+
+                </ul>
+
+            </div>
+
+            <div class="housestyle wrapper">
+
+                <span class="box-1 fl">户型</span>
+
+                <ul class="first clearfix">
+
+                    <li class="one"><a onclick="clearCookie('huxing')">全部</a></li>
+                     {volist name="cate" id="vos"}
+                    
+                    <li {if condition="$Think.cookie.huxing == $vos.type"}class="one" {/if}><a onclick="shaixuan('huxing','{$vos.type}')">{$vos.type}</a></li>
+
+                     {/volist}
+                
+                </ul>
+
+            </div>
+
+            <div class="area wrapper">
+
+                <span class="box-1 fl">面积</span>
+
+                <ul class="first clearfix">
+
+                <li class="one"><a onclick="clearCookie('mianji')">全部</a></li>
+                {volist name="cate" id="voss"}
+                    <li {if condition="$Think.cookie.mianji == $voss.acreage"}class="one" {/if}><a onclick="shaixuan('mianji','{$voss.acreage}')">{$voss.acreage}</a></li>
+                {/volist}
+                    
+
+                </ul>
+
+            </div>  
+
+        </div>
+
+      
+
+
+
+        <!-- stylelist 结束 -->
+
+        <!-- pic 开始 -->
+
+        
+
+        <div class="pic wrapper clearfix">
+
+            {foreach name="exhibition" item="exhi"}
+
+            <div class="block-1 fl">
+
+                <a href="/home/details/id/{$exhi['id']}"><img src="/public/uploads/{$exhi['pic']}" alt=""></a>
+
+                <div class="world">
+
+                    <p><a href="###">{$exhi['name']}</a></p>
+
+                    <span>设计师：{$exhi['desifner']}</span>
+
+                </div>
+
+            </div>
+
+            {/foreach}
+
+
+
+        </div>
+
+        <!-- pic 结束 -->
+
+        <!--numlist 开始  -->
+
+      <!--   <div class="numlist">
+
+            <div class="date">
+
+                <a href="###" class="page">首页</a>
+
+                <a href="###" class="page">上一页</a>
+
+                <a href="###" class="num">1</a>
+
+                <a href="###" class="num show">2</a>
+
+                <a href="###" class="num">3</a>
+
+                <a href="###" class="num">4</a>
+
+                <a href="###" class="page">下一页</a>
+
+                <span>到第</span>&nbsp;<input type="text" value="" class="topage"><span>页</span>&nbsp;
+
+                <a href="###" class="num show">GO</a>
+
+            </div>
+
+        </div> -->
+
+        <!-- numlist 结束 -->
+
+        <!--底部 开始  -->
+
+         {:widget("Cate/footer")}
+
+        <!-- 底部 结束 -->
+
+        <!-- 返回顶部开始 -->
+
+        <div class="box" id="box">
+
+            <div class="return"><a href="/home/index">返回首页</a></div>
+
+            <div class="back" id="back"></div>
+
+        </div>
+
+        <!-- 返回顶部结束 -->
+ <script type="text/javascript">
+
+
+ function setCookie(c_name, value, expiredays){
+ 　　　　var exdate=new Date();
+　　　　exdate.setDate(exdate.getDate() + expiredays);
+　　　　document.cookie=c_name+ "=" + encodeURI(value) + ((expiredays==null) ? "" : ";expires="+exdate.toGMTString())+";path =/";
+ 　　}
+
+
+ function clearCookie(name) {  
+    setCookie(name, "", -1);  
+    window.location.reload();
+} 
+
+function shaixuan(name,value)
+{
+setCookie(name,value,30);
+window.location.reload();
+}
+
+ </script>
+        <script src="/public/static/home/js/common.js"></script>
+
+    </body>
+
+</html>

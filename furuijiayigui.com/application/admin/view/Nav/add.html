@@ -1,0 +1,69 @@
+{extend name="AdminPublic:pub"}
+
+
+
+{block name="right"}
+
+<div class="pd-20">
+
+  <div class="Huiform">
+
+    <form action="/navs/insert" method="post" enctype="multipart/form-data">
+
+      <table class="table table-bg">
+
+        <tbody>
+
+          <tr>
+
+            <th width="100" class="text-r"><span class="c-red">*</span> 标题</th>
+
+            <td><input type="text" style="width:300px" class="input-text" value="" placeholder="添加导航标题" id="user-name" name="title" datatype="*2-16" nullmsg="名字不能为空"></td>
+
+          </tr>
+
+          <tr>
+
+            <th width="100" class="text-r"><span class="c-red">*</span> 路径</th>
+
+            <td><input type="text" style="width:300px" class="input-text" value="" placeholder="添加路径" id="user-name" name="url" datatype="*2-16" nullmsg="名字不能为空"></td>
+
+          </tr>
+          <tr>
+
+            <th width="100" class="text-r"><span class="c-red">*</span> 背景图片</th>
+
+            <td><input type="file" style="width:300px" class="input-text" value="" placeholder="" id="user-name" name="pic" datatype="*2-16"></td>
+
+          </tr>
+           		       
+
+          <tr>
+
+            <th></th>
+
+            <td><button class="btn btn-success radius" type="submit"><i class="icon-ok"></i> 添加</button></td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </form>
+
+  </div>
+
+</div>
+
+<script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
+
+
+
+</body>
+
+</html>
+
+
+
+{/block}

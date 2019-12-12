@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+
+        <title>芙瑞伽商学院</title>
+
+        <link rel="stylesheet" href="/public/static/home/css/reset.css">
+
+        <link rel="stylesheet" href="/public/static/home/css/common.css">
+
+        <link rel="stylesheet" href="/public/static/home/css/shangxue.css">
+
+    </head>
+
+    <body>
+
+    <!-- 头部start -->
+
+    	{:widget("Cate/header")}
+
+    	<!-- 头部end -->
+
+		<!-- banner开始 -->
+
+		<div class="banner">
+
+			<img src="/public/static/home/images/banner-1.png"  alt="">
+
+		</div>
+
+		<!-- banner结束 -->
+
+		<!-- 芙瑞伽商学院开始 -->
+
+		<div class="contacts">
+
+			<ul class="present clearfix">
+
+				<li class="opoo">
+
+					<h3>芙瑞伽商学院</h3>
+
+				</li>
+
+				<li class="po2 lisd">
+
+					<a href="###">芙瑞伽商学院</a>
+
+				</li>
+
+				<li class="po2">
+
+					<a href="/home/index">首页></a>
+
+				</li>
+
+				<li class="po2 ">当前位置:</li>
+
+			</ul>
+
+		</div>
+
+		<div class="news">
+
+			
+
+
+
+			{foreach name="news" item="new"}
+
+			<div>
+
+				<a href="/home/newlook/id/{$new['id']}"><img src="/public/uploads/{$new['pic']}" alt=""></a>
+
+				<div>
+
+					<h2>{$new['title']}</h2>
+
+					<p>
+
+						<!-- 4月29日瑞博文装饰与局外网、知名建材业的佼佼者在世纪居生活家广场举办了家居建材团购活动，为广大业主朋友提供了一个实惠、方便的...... -->
+
+						{$new['content'] |strip_tags|mb_substr=0,180,'utf-8'}...
+
+						<a href="/home/newlook/id/{$new['id']}">[查看详情]</a>
+
+					</p>
+
+					<div><!-- 2017-04-29  -->
+
+						<!-- <a href="###" class="a1"><i class="spr"></i>131</a>
+
+						<a href="###" class="a2"><i class="spr1"></i>98</a> -->
+
+					</div>
+
+				</div>       				
+
+			</div>
+
+			{/foreach}
+
+		
+
+		</div>
+
+		
+
+
+
+		<div class="but">
+			{$news->render()}
+			<!-- <a class="inp" href="###">首页</a>
+
+			<a class="inp" href="###">上一页</a>
+
+			<a href="">1</a>
+
+			<a class="two" href="###">2</a>
+
+			<a href="###">3</a>
+
+			<a href="###">4</a>
+
+			<a href="###">5</a>
+
+			<a href="###">...</a>
+
+			<a href="###">23</a>
+
+			<a class="inp" href="###">下一页</a>
+
+			到第<input type="text" class="texts">页
+
+			<a class="two last" href="###">GO</a> -->
+
+		</div>
+
+		<!-- 芙瑞伽商学院结束 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+    	<!-- 底部开始 -->
+
+    	{:widget("Cate/footer")}
+
+    	<!-- 底部结束 -->
+
+    	<!-- 返回顶部开始 -->
+
+    	<div class="box" id="box">
+
+    		<div class="return"><a href="index.html">返回首页</a></div>
+
+    		<div class="back" id="back"></div>
+
+    	</div>
+
+    	<!-- 返回顶部结束 -->
+
+    	<script src="/public/static/home/js/common.js"></script>
+
+    </body>
+
+</html>-->
+
+    </body>
+
+</html>

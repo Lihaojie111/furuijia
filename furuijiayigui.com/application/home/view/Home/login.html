@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<title>登录</title>
+
+	 <meta name="description" content="芙瑞伽衣柜" />
+
+        <meta name="keywords" content="芙瑞伽衣柜" />
+
+	<link rel="stylesheet" href="/public/static/home/css/reset.css">
+
+	<link rel="stylesheet" href="/public/static/home/css/common.css">
+
+	<link rel="stylesheet" href="/public/static/home/css/xiangmu5.css">
+
+	<link rel="stylesheet" href="/public/static/home/css/login.css">
+
+</head>
+
+<body style="background: url(/public/static/home/images/4.jpg) no-repeat;">
+
+
+
+	 {:widget("Cate/header")}
+
+	<div class="login">
+
+		<div class="wrapper">
+
+			<div class="login-con">
+
+				<h3>芙瑞伽商学院</h3>
+
+				<form action="/home/dologin" method="post">
+
+					<input type="text" placeholder="请输入账户" class="input1" maxlength="16"  name="name"><img src="/public/static/home/images/login_ico_02.png" alt="" class="img1">
+
+					<input type="password" placeholder="请输入密码" class="input2" maxlength="16" name="password"><img src="/public/static/home/images/login_ico_05.png" alt="" class="img2"><br>
+
+					<button type="submit" class="btn1">登录</button>
+
+				</form>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</body>
+
+</html>

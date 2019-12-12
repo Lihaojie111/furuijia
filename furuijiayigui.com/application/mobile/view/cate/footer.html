@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+
+		<meta charset="utf-8">
+
+		<title>脚部</title>
+
+		<meta name="description" content="芙瑞伽衣柜" />
+
+		<meta name="keywords" content="芙瑞伽衣柜" />
+		<!-- 
+	    <link rel="stylesheet" href="/public/static/home/css/reset.css">
+	
+	    <link rel="stylesheet" href="/public/static/home/css/common.css"> -->
+
+	<!-- 	<link rel="stylesheet" href="/public/static/mobile/css/footer.css"> -->
+		<script src="/public/static/mobile/js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+<body>
+	<div class="qffirst">
+		<div class="qffirst_1">
+			<img src="/public/static/mobile/img/shang.png" alt="">
+			友情链接: 
+			{foreach name="link" item="link"}
+
+                    <a href="{$link['url']}" class="first">{$link['name']}</a>
+
+                   <!--  <a href="###">郑州家庭装修</a> -->
+
+                   
+
+                    {/foreach}
+		</div>
+		<div class="qfsecond_0">
+			<div class="qfsecond">
+				<div>
+					电话:{$peizhi['dianhua']}
+				</div>
+				<div>
+					邮箱:{$peizhi['youxiang']}
+				</div>
+				<div>
+					上海芙瑞伽衣柜销售有限公司
+				</div>
+				<div>
+					华中地址:河南省郑州市管城区商都路与东周路交汇处南50米
+				</div>
+				<div>
+					华东地址:上海市松江区乐都西路825弄89、90号
+				</div>
+			</div>
+			<div class="qfsecond_2">
+				<div class="qfsecond_2_1">
+					<img src="/public/static/home/images/common_03.jpg" alt="">
+					<div>官方微信</div>
+				</div>
+				<div class="qfsecond_2_1">
+					<img src="/public/static/home/images/common_05.jpg" alt="">
+					<div>官方微博</div>
+				</div>
+				<div class="qfsecond_2_1">
+					<img src="/public/static/home/images/common_07.jpg" alt="">
+					<div>
+						天猫旗舰店
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="qfthree">
+			版权所有:郑州芙瑞伽衣柜设计有限公司   网站备案:豫ICP备18036814号
+		</div>
+	</div>
+</body>
+</html>

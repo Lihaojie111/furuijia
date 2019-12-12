@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+
+        <title>关于我们</title>
+
+         <meta name="description" content="芙瑞伽衣柜" />
+
+        <meta name="keywords" content="芙瑞伽衣柜" />
+
+        <link rel="stylesheet" href="/public/static/home/css/reset.css">
+
+        <link rel="stylesheet" href="/public/static/home/css/common.css">
+
+        <link rel="stylesheet" href="/public/static/home/css/mprofile.css">
+
+    </head>
+
+    <body>
+
+    	<!-- 头部start -->
+
+    	{:widget("Cate/header")}
+
+
+
+    	<!-- 头部end -->
+
+    	<!-- banner部分开始 -->
+
+		<div class="banner">
+
+    		<img src="/public/uploads/{$nav['pic']}" alt="">
+
+    	</div>
+
+    
+
+		<!-- banner部分结束 -->
+
+		<!-- content部分开始 -->
+
+		<div class="content">
+
+			<div class="wrapper">
+
+				<div class="top clearfix">
+
+					<ul class="tit fl" id="clasf">
+
+						<li class="current"><a href="###" class="line">公司简介</a></li>
+
+						<li><a href="###" class="space line">企业文化</a></li>
+
+						<li><a href="###">企业荣耀</a></li>
+
+					</ul>
+
+					<div class="fr">
+
+						<span>当前位置: <a href="index.html">首页</a>></span><span class="desc">关于我们</span>
+
+					</div>
+
+				</div>
+
+				<div id="bot">
+
+					<div class="bott show">
+
+						<div class="txt">
+
+							<p>
+
+								
+
+								{$yonpsis['content']}
+
+
+
+							</p>
+
+							
+
+						</div>
+
+						
+
+					</div>
+
+					<div class="bott">
+
+						<div class="txt">
+
+							<p>
+
+								{$culture['content']}
+
+							</p>
+
+							
+
+						</div>
+
+						
+
+					</div>
+
+					<div class="bott">
+
+						<div class="container-img">
+
+							<ul class="clearfix">
+
+								{foreach name="glory" item="glorys"}
+								<li><img src="/public/uploads/{$glorys['pic']}"></li>
+
+								{/foreach}
+
+							</ul>
+
+							<div class="but">
+								{$glory->render()}
+								<!-- <a class="inp" href="###">首页</a>
+
+								<a class="inp" href="###">上一页</a>
+
+								<a href="###">1</a>
+
+								<a class="two" href="###">2</a>
+
+								<a href="###">3</a>
+
+								<a class="inp" href="###">下一页</a>
+
+								到第<input type="text" class="texts">页
+
+								<a class="two last" href="###">GO</a> -->
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<!-- content部分结束 -->
+
+ 	<!-- 底部开始 -->
+
+    	{:widget("Cate/footer")}
+
+
+
+    	<!-- 底部结束 -->
+
+    	<!-- 返回顶部开始 -->
+
+    	<div class="box" id="box">
+
+    		<div class="return"><a href="index.html">返回首页</a></div>
+
+    		<div class="back" id="back"></div>
+
+    	</div>
+
+    	<!-- 返回顶部结束 -->
+
+    	<script src="/public/static/home/js/common.js"></script>
+
+    	<script src="/public/static/home/js/mprofile.js"></script>
+
+    </body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>产品分类</title>
+	 <meta name="description" content="芙瑞伽衣柜" />
+        <meta name="keywords" content="芙瑞伽衣柜" />
+	<link rel="stylesheet" href="/public/static/home/css/reset.css">
+	<link rel="stylesheet" href="/public/static/home/css/common.css">
+	<link rel="stylesheet" href="/public/static/home/css/xiangmu7.css">
+	<link rel="stylesheet" href="/public/static/home/css/style-tab.css">
+
+</head>
+<body>
+<!-- 头部start -->
+	 {:widget("Cate/header")}
+	<!-- 头部end -->
+	
+	<div class="banner">
+		<img src="/public/uploads/{$nav['pic']}" alt="">
+	</div>
+	
+	<div class="container clearfix">
+		<div class="container-head">
+			<h3>产品分类</h3>
+			<p>当前位置: <a href="index.html">首页></a><span>产品分类</span></p>
+		</div>
+		  
+		<div class="tab-wrapper">
+			<ul class="tab-menu">
+			{volist name="cate" id="vo"}
+			
+				<li>{$vo.name}</li>
+ 				
+			 {/volist}	
+                
+	
+			</ul>
+			
+
+			<div class="tab-content">
+				<!-- tab1 -->
+				{foreach name="data" item="row"}
+				<div>
+					
+					<div class="container-center">
+						{foreach name="row" item="row2"}
+						<div>
+							
+							<div class="images">
+								<a href="/home/describes/id/{$row2['id']}"><img src="/public/uploads/{$row2['pic']}" alt=""></a> 
+								<p><a href="/home/describes/id/{$row2['id']}" class="left">免费咨询</a><a href="/home/describes/id/{$row2['id']}" class="right">免费规划</a></p>
+							</div>
+							
+							<div class="jianjie">
+								<p class="p1"><strong>{$row2['describe']}</strong></p>
+								<p class="xian"></p>
+								
+							
+							</div>
+						</div>
+					
+                        {/foreach}
+
+					
+					</div>
+					
+				</div>
+				{/foreach}
+				
+
+				<!-- tab2 -->
+						
+
+
+
+
+			
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="but">
+		
+
+		<!-- <a class="inp" href="###">首页</a>
+		<a class="inp" href="###">上一页</a>
+		<a href="">1</a>
+		<a class="two" href="###">2</a>
+		<a href="###">3</a>
+		<a class="inp" href="###">下一页</a>
+		到第<input type="text" class="texts">页
+		<a class="two last" href="###">GO</a> -->
+	</div>
+	<!-- 底部开始 -->
+	{:widget("Cate/footer")}
+	<!-- 底部结束 -->
+	<!-- 返回顶部开始 -->
+	<div class="box" id="box">
+		<div class="return"><a href="index.html">返回首页</a></div>
+		<div class="back" id="back"></div>
+	</div>
+	<!-- 返回顶部结束 -->
+	<script src="/public/static/home/js/common.js"></script>
+</body>
+	<script src='/public/static/home/js/jquery.min.js'></script>
+ <script  src="/public/static/home/js/index-tab.js"></script>
+</html>

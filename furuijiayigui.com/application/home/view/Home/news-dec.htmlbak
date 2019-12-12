@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+
+        <title>{$look['title']}</title>
+
+         <meta name="description" content="芙瑞伽衣柜" />
+
+        <meta name="keywords" content="芙瑞伽衣柜" />
+
+        <link rel="stylesheet" href="/public/static/home/css/reset.css">
+
+        <link rel="stylesheet" href="/public/static/home/css/common.css">
+
+        <link rel="stylesheet" href="/public/static/home/css/decorate.css">
+
+    </head>
+
+    <body>
+
+    	<!-- 头部start -->
+
+             {:widget("Cate/header")}
+
+        <!-- 头部end -->
+
+    	<!-- banner开始 -->
+
+    	<div class="banner"></div>
+
+    	<!-- banner结束 -->
+
+    	<!-- news开始 -->
+
+    	<div class="news wrapper">
+
+    		<div class="inner clearfix">
+
+    			<div class="left fl">
+
+    				<h3>新闻资讯</h3>
+
+    			</div>
+
+    			<div class="right fr">
+
+    				<span>当前位置：<a href="/home/index">首页></a><a href="news.html">新闻资讯></a></span><strong>新闻详情</strong>
+
+    			</div>
+
+    		</div>
+
+    	</div>
+
+    	<!-- news结束 -->
+
+    	<!-- world-1开始 -->
+
+    	<div class="world-1 wrapper">
+
+    		<h2>{$look['title']}</h2>
+
+    		<p>时间：{if condition="$look['time'] == ''"}未知{else/}{$look['time']}{/if}</p>
+
+    		<p class="first"><span>来源：{if condition="$look['source'] == ''"}芙瑞伽{else/}{$look['source']}{/if}</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>关键词：{if condition="$look['key'] == ''"}芙瑞伽{else/}{$look['key']}{/if}</span></p>
+
+    	</div>
+
+    	<!-- world-1结束 -->
+
+    	<!--world-2开始  -->
+
+    	<div class="world-2 wrapper">
+
+    		<p class="one">
+
+                {$look['content']}
+
+
+
+
+
+            </p>
+
+    	
+
+    	</div>
+
+    	<!-- world-2结束 -->
+
+		<!--底部 开始  -->
+
+    	{:widget("Cate/footer")}
+
+    	<!-- 底部 结束 -->
+
+        <!-- 返回顶部开始 -->
+
+        <div class="box" id="box">
+
+            <div class="return"><a href="index.html">返回首页</a></div>
+
+            <div class="back" id="back"></div>
+
+        </div>
+
+        <!-- 返回顶部结束 -->
+
+        <script src="/public/static/home/js/common.js"></script>
+
+    </body>
+
+</html>

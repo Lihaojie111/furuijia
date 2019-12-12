@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+
+        <title>{$exhi['name']}-案例详情</title>
+
+         <meta name="description" content="芙瑞伽衣柜" />
+
+        <meta name="keywords" content="芙瑞伽衣柜" />
+
+        <link rel="stylesheet" href="/public/static/home/css/reset.css">
+
+        <link rel="stylesheet" href="/public/static/home/css/common.css">
+
+        <link rel="stylesheet" href="/public/static/home/css/decorate-nine.css">        
+
+    </head>
+
+    <body>
+
+    	<!-- head开始-->
+
+    	{:widget("Cate/header")}
+
+    	<!-- head结束 -->
+
+    	<!-- banner 开始 -->
+
+    	<div class="banner">
+
+              
+
+        </div>
+
+    	<!-- banner 结束 -->
+
+    	<!-- news开始 -->
+
+    	<div class="news wrapper">
+
+    		<div class="inner clearfix">
+
+    			<div class="left fl">
+
+    				<h3>案例展示</h3>
+
+    			</div>
+
+    			<div class="right fr">
+
+    				<span>当前位置：<a href="/home/index">首页></a><a href="decorate-eigth.html">案例展示</a>></span><strong>案例详情</strong>
+
+    			</div>
+
+    		</div>
+
+    	</div>
+
+    	<!-- news结束 -->
+
+    	<!-- chinastyle 开始 -->
+
+		<div class="chinastyle">
+
+			<div class="world wrapper">
+
+				<h3>{$exhi['name']}</h3>
+
+				<p class="first"><span>案例风格：{$exhi['style']}&nbsp;&nbsp;&nbsp;设计师：{$exhi['desifner']}</span></p>
+            
+ {$exhi['content']}
+
+
+				<p>
+              
+                  
+
+                   
+
+                </p>
+
+
+
+		    </div>	
+
+		</div>
+
+	
+
+		<!-- pic结束 -->
+
+		<!--iconlist 开始  -->
+
+		<div class="iconlist">
+
+			<div class="share wrapper">
+
+				<div class="icon">
+
+					<span>分享到：</span>
+
+					<a href="###"><i class="icon-1"></i></a>
+
+					<a href="###"><i class="icon-2"></i></a>
+
+					<a href="###"><i class="icon-3"></i></a>
+
+					<a href="###"><i class="icon-4"></a></i>
+
+				</div>
+
+				<div class="downup">
+
+					<i class="icon-5"></i>
+
+                  <span class="left">{if condition="$sy == ''"}<a href="">上一个案例：没有了</a>{else/}<a href='/home/details/id/{$sy.id}'>{$sy.name}</a>{/if}</span>
+
+					<i class="icon-6"></i>
+
+					<span class="right">{if condition="$xy == ''"}<a href="">下一个案例：没有了</a>{else/}<a href='/home/details/id/{$xy.id}'>{$xy.name}</a>{/if}</span>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	<!-- iconlist 结束 -->
+
+
+
+    	<!--底部 开始  -->
+
+    	{:widget("Cate/footer")}
+
+    	<!-- 底部 结束 -->
+
+    	<!-- 返回顶部开始 -->
+
+        <div class="box" id="box">
+
+            <div class="return"><a href="index.html">返回首页</a></div>
+
+            <div class="back" id="back"></div>
+
+        </div>
+
+        <!-- 返回顶部结束 -->
+
+        <script src="/public/static/home/js/common.js"></script>
+
+    </body>
+
+</html>

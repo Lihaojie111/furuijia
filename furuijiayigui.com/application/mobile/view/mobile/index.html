@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="utf-8">
+
+		<title>首页-芙瑞伽</title>
+
+		<meta name="description" content="芙瑞伽衣柜" />
+
+		<meta name="keywords" content="芙瑞伽衣柜" />
+
+		<meta name="renderer" content="webkit">
+		<!--360渲染模式-->
+
+		<meta name="format-detection" content="telephone=notelphone=no, email=no" />
+
+		<!-- <link rel="stylesheet" href="/public/static/home/css/reset.css">
+		
+	
+	 <link rel="stylesheet" href="/public/static/home/css/common.css"> -->
+<script src="/public/static/mobile/js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" href="/public/static/mobile/css/index.css">
+		<style type="text/css">
+			.hfirst_1{
+				width:40%;
+				height: 120px;
+				text-align: center;
+				
+			}
+			.hfirst_1 img{
+				width: 90%;
+				height: 100%;
+				
+			}
+			.hfirst{
+				display: flex;
+				justify-content: space-between;
+			}
+			.hfirst_2{
+				text-align: center;
+			}
+			.hfirst_2 img{
+				width: 80px;
+				height: 80px;
+				margin-top: 30px;
+				margin-right: 40px;
+			}
+			.hzone{
+				position: relative;
+				background-color: white;
+			}
+			.hsecond{
+				z-index: 999;
+				position: absolute;
+				top: 97%;
+				right: 0%;
+				font-size: 38px;
+				width: 18%;
+				text-align: center;
+				border: 1px solid gray;
+				background-color: white;
+			}
+			.hsecond div{
+				margin: 28px 8px;
+				
+			}
+			a{
+				text-decoration : none;
+				color: black;
+			}
+			.qffirst_1 img{
+	width:50px;
+	height: 50px;
+}
+.qfsecond{
+	font-size: 30px;
+	color:#8e8e8e ;
+	width: 50%;
+}
+.qffirst_1{
+	font-size: 30px;
+	color: #717171;
+}
+.qffirst{
+	background-color: #000000;
+}
+ .qfsecond_0{
+	display: flex;
+}
+.qfsecond_2{
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	color:#8e8e8e ;
+	font-size: 26px;
+	text-align: center;
+}
+.qfsecond_2_1 img{
+	width: 100px;
+	height: 100px;
+}
+.qfsecond_2_1{
+	width: 30%;
+}
+.qfthree{
+	font-size: 30px;
+	color: #8e8e8e;
+	text-align: center;
+	margin: 20px;
+	padding-bottom: 15px;
+}
+		</style>
+	</head>
+	<script type="text/javascript">
+		var index = 0;
+		var divs;
+		var box;
+		var t;
+		var lis;
+		var arrs;
+
+		window.onload = function() {
+			divs = document.getElementById('big-b').getElementsByTagName('div'); //轮播内容
+			box = document.getElementById('box');
+			lis = document.getElementById('small-b').getElementsByTagName('li');
+
+			t = setInterval(moveNext, 2000);
+
+			for (var i = 0; i < lis.length; i++) {
+				lis[i]._index = i;
+				lis[i].onclick = function() {
+
+					lis[index].className = '';
+					divs[index].className = '';
+
+					this.className = 'sel';
+					divs[this._index].className = 'current';
+
+					index = this._index;
+				};
+			}
+		}
+
+		function moveNext() {
+			divs[index].className = '';
+			lis[index].className = '';
+			index++;
+			if (index == divs.length) {
+				index = 0;
+			}
+			divs[index].className = 'current';
+			lis[index].className = 'sel';
+		}
+
+		function movePre() {
+			divs[index].className = '';
+			lis[index].className = '';
+			index--;
+			if (index == -1) {
+				index = divs.length - 1;
+			}
+			divs[index].className = 'current';
+			lis[index].className = 'sel';
+		}
+	</script>
+	<style type="text/css">
+		
+		
+	</style>
+	<body>
+		<!-- <iframe class="header" src="header.html" width="100%" height="400"></iframe> -->
+		<div class="hzone">
+			<div class="hfirst">
+				<div class="hfirst_1">
+					<img src="/public/static/mobile/img/login.png" >
+				</div>
+				<div class="hfirst_2">
+					<img src="/public/static/mobile/img/mulu111.png" >
+				</div>
+			</div>
+			<div class="hsecond">
+					<a href="/mobile/index">
+				<div>首页</div>
+			</a>
+			<a href="/mobile/profile/id/8">
+				<div>关于我们</div>
+			</a>
+			<a href="/mobile/news/id/9">
+				<div>新闻资讯</div>
+			</a>
+			<a href="/mobile/classify/id/10">
+				<div>产品分类</div>
+			</a>
+			<a href="/mobile/exhibition/id/11">
+				<div>案列展示</div>
+			</a>
+			<a href="/mobile/zhaoshang/id/12">
+				<div>招商加盟</div>
+			</a>
+			<a href="/mobile/login">
+				<div>芙瑞伽商学院</div>
+			</a>
+			</div>
+		</div>
+		<div class="banner">
+			<div id="box">
+				<div id="big-b">
+
+
+		{volist name="map" key="k" id="map"}
+					<div> <img src="/public/uploads/{$map['img']}" alt=""></div>
+		{/volist}
+				<!-- 	<div> <img src="http://img4.imgtn.bdimg.com/it/u=1688026885,2773767715&fm=26&gp=0.jpg" alt=""></div>
+					<div> <img src="http://img4.imgtn.bdimg.com/it/u=508387608,2848974022&fm=26&gp=0.jpg" alt=""></div>
+					<div> <img src="http://img4.imgtn.bdimg.com/it/u=1688026885,2773767715&fm=26&gp=0.jpg" alt=""></div> -->
+				</div>
+				<ol id="small-b">
+					<li class="sel"></li>
+					<li class="sel"></li>
+					<li class="sel"></li>
+					<li class="sel"></li>
+
+				</ol>
+			</div>
+
+
+		</div>
+		<!-- 爱生活懂空间开始 -->
+		<div>
+			<div class="love-style-header">
+
+				<p>爱生活 · 懂空间</p>
+
+			</div>
+			<div class="first">
+				<!--1-->
+				{foreach name="room" item="rooms"}
+				<div class="first_1">
+					<a href="/home/classify">
+					<div class="first_2">{$rooms['name']}</div>
+					<div class="first_3">{$rooms['describe']}</div>
+					<div class="first_img">
+						<img src="/public/uploads/{$rooms['pic']}" alt="">
+					</div>
+					</a>
+				</div>
+				{/foreach}
+				<!--2-->
+				<!-- <div class="first_1">
+					<div class="first_2">卧式</div>
+					<div class="first_3">品味时尚科技美学</div>
+					<div class="first_img">
+						<img src="/public/static/mobile/img/111.jpg" alt="">
+					</div>
+				</div> -->
+				<!--2-->
+				<!-- <div class="first_1">
+					<div class="first_2">卧式</div>
+					<div class="first_3">品味时尚科技美学</div>
+					<div class="first_img">
+						<img src="/public/static/mobile/img/111.jpg" alt="">
+					</div>
+				</div> -->
+				<!--2-->
+				<!-- <div class="first_1">
+					<div class="first_2">卧式</div>
+					<div class="first_3">品味时尚科技美学</div>
+					<div class="first_img">
+						<img src="/public/static/mobile/img/111.jpg" alt="">
+					</div>
+				</div> -->
+			</div>
+			<!-- 爱生活懂空间开始 -->
+			<div>
+				<div class="love-style-header">
+
+					<p>芙瑞伽 · 幸福家</p>
+
+				</div>
+				<div class="first">
+					<!--1-->
+					{foreach name="room2" item="promotion"}
+					<div class="first_1">
+						<a href="">
+						<div class="first_2">{$promotion['name']}</div>
+						<div class="first_3">{$promotion['describe']}</div>
+						<div class="first_img">
+							<img src="/public/uploads/{$promotion['pic']}" alt="">
+						</div>
+						</a>
+					</div>
+					{/foreach}
+					<!--2-->
+				<!-- 	<div class="first_1">
+						<div class="first_2">卧式</div>
+						<div class="first_3">品味时尚科技美学</div>
+						<div class="first_img">
+							<img src="/public/static/mobile/img/111.jpg" alt="">
+						</div>
+					</div> -->
+					<!--2-->
+					<!-- <div class="first_1">
+						<div class="first_2">卧式</div>
+						<div class="first_3">品味时尚科技美学</div>
+						<div class="first_img">
+							<img src="/public/static/mobile/img/111.jpg" alt="">
+						</div>
+					</div> -->
+					<!--2-->
+				<!-- 	<div class="first_1">
+						<div class="first_2">卧式</div>
+						<div class="first_3">品味时尚科技美学</div>
+						<div class="first_img">
+							<img src="/public/static/mobile/img/111.jpg" alt="">
+						</div>
+					</div> -->
+				</div>
+			</div>
+			<!-- 爱生活懂空间开始 -->
+			<div>
+				<div class="second">
+					<p class="second_1">芙瑞伽·资讯中心</p>
+					<p class="second_2">NEWS</p>
+				</div>
+				<div class="second_3">
+					<div class="second_3_1">
+						<img src="/public/static/home/images/photo-10.jpg" alt="">
+					</div>
+				</div>
+				<div class="second_4">
+			{foreach name="news" item="news"}
+
+					<div class="second_4_1">
+						<div class="second_4_1_1">{$news['title']}</div>
+						<div class="second_4_1_2"><a href="/mobile/newlook/id/{$news['id']}">{$news['content']|strip_tags|mb_substr=0,180,'utf-8'}...</a></div>
+					</div>
+					{/foreach}
+				<!-- 	<div class="second_4_1">
+						<div class="second_4_1_1">前民是发送到发时代峻峰了加大卢浮宫</div>
+						<div class="second_4_1_2">沙发上地上打滚阿萨德阿萨德高度刚阿上地上打滚阿萨德阿萨德高度刚阿上地上打滚阿萨德阿萨德高度刚阿萨德高度刚阿萨德高度刚阿萨德高度刚高度刚俺大姑阿道夫刚梵蒂冈个俺哥</div>
+					</div> -->
+					<!-- <div class="second_4_1">
+						<div class="second_4_1_1">前民是发送到发时代峻峰了加大卢浮宫</div>
+						<div class="second_4_1_2">沙发上地上打滚阿萨德阿萨德高度刚阿上地上打滚阿萨德阿萨德高度刚阿上地上打滚阿萨德阿萨德高度刚阿萨德高度刚阿萨德高度刚阿萨德高度刚高度刚俺大姑阿道夫刚梵蒂冈个俺哥</div>
+					</div> -->
+				</div>
+			</div>
+			<!-- 查看更多 -->
+			<div  class="three">
+					<a href="/mobile/news">
+				查看更多
+			</a>
+			</div>
+		</div>
+		{:widget("Cate/footer")}
+	</body>
+	<script type="text/javascript">
+		$(".hsecond").hide();
+		$(".hfirst_2").on("click",function(){
+			$(".hsecond").toggle();
+		})
+		
+	</script>
+	<script type="text/javascript">
+		// $(".hsecond div").on("click",function(){
+		// 	var i=$(this).index();
+		// 	console.log(i)
+		// 	if(i==0){
+		// 		window.location.href = "index.html";
+		// 	}else if(i==1){
+		// 		window.location.href = "profile.html";
+		// 	}else if(i==2){
+		// 		window.location.href = "new.html";
+		// 	}else if(i==3){
+		// 		window.location.href = "classify.html";
+		// 	}else if(i==4)
+		// })
+	</script>
+</html>

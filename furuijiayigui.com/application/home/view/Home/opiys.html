@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8"> 
+
+        <title>详情-{$room['name']}</title>
+
+         <meta name="description" content="芙瑞伽衣柜" />
+
+        <meta name="keywords" content="芙瑞伽衣柜" />       
+
+        <link rel="stylesheet" href="/public/static/home/css/reset.css">
+
+        <link rel="stylesheet" href="/public/static/home/css/common.css">
+
+        <link rel="stylesheet" href="/public/static/home/css/opiys.css">
+
+    </head>
+
+    <body>
+
+    <!-- 头部start -->
+
+      {:widget("Cate/header")}
+
+      <!-- 头部end -->
+
+    <!-- banner开始 -->
+
+    <div class="banner">
+
+      <img src="/public/static/home/images/banner-2.png" height="300" width="1920" alt="">
+
+    </div>
+
+    <!-- banner结束 -->
+
+    <div class="wrapper">
+
+      <!-- 产品分类开始 -->
+
+      <div class="sheji clearfix">
+
+        <h3>产品分类</h3>
+
+        <p><span>当前位置:</span><span>
+
+          <a href="{:url('index')}">首页></a>
+
+        </span><span><a href="team.html">产品分类</a></span><span class="shejishi">>产品详情</span></p>
+
+      </div>
+
+      <!-- 产品分类结束 -->
+
+      <!-- 设计师介绍部分开始 -->
+
+      <div class="shi">
+
+        <div class="shil">
+
+          <!-- 左边开始 -->
+
+          <div class="tutu">
+
+
+
+            <div class="tutu-1">
+
+              <img src="/public/uploads/{$room['pic']}" height="300" width="300" alt="">
+
+            </div>
+
+            <div class="ertyi">
+
+              <!-- <p class="ertyi-1">
+
+                <span class="bianda">729</span>
+
+                <span class="bianxiao">浏览</span>
+
+              </p> -->
+
+              <div class="line"></div>
+
+            <!--  <p class="ertyi-2">
+
+                <span class="bianda">24</span>
+
+                <span class="bianxiao">预约</span>
+
+              </p> -->
+<!-- 
+              <p class="ertyi-3">
+
+                <span class="bianda">4729</span>
+
+                <span class="bianxiao">人气</span>
+
+              </p>
+ -->
+            </div>
+
+          </div>
+                  
+
+          <!-- 左边结束 -->
+
+          <!-- 右边开始 -->
+
+         <div class="pocd">
+
+
+      
+
+
+
+
+
+            <h3>{$room['name']}</h3>
+
+            <p class="pspdd">
+
+           <!--    <strong>总监:</strong>
+
+              <span class="reer">设计总监</span> -->
+
+            </p>
+
+          
+
+       
+            <p class="pspdd">
+
+              <strong>内容:</strong>
+
+              <span>{$room['content']}</span>
+
+            </p>
+
+          </div>
+
+          <!-- 右边结束 -->
+
+        </div>
+
+
+
+        <!-- <div class="shir" id="shir">
+
+          <div class="rtgtt"> 
+
+            <p class="wzss">免费量房</p>
+
+            <p class="wzss current">免费预约</p>
+
+          </div>
+
+          <div class="tab">
+
+            <p class="ecvv">
+
+              <input type="text" class="inputt" placeholder="您的姓名">
+
+            </p>
+
+            <p class="ecvv">
+
+              <input type="text" class="inputt" placeholder="请输入您的电话">
+
+            </p>
+
+            <p class="ecvv">
+
+              <input type="text" class="inputt" placeholder="请输入房屋面积">
+
+            </p>
+
+            <p class="ecvv">
+
+              <input type="text" class="inputt" placeholder="请输入小区名称">
+
+            </p>
+
+            <p class="bffb">
+
+              <input type="button" class="vddv" value="立即提交">
+
+            </p>
+
+          </div>
+
+          <div class="tab current">
+
+            <p class="ecvv">
+
+              <input type="text" class="inputt" placeholder="请输入您的姓名">
+
+            </p>
+
+            <p class="ecvv">
+
+              <input type="text" class="inputt" placeholder="请输入您的电话">
+
+            </p>
+
+            <p class="ecvv">
+
+              <input type="text" class="inputt" placeholder="请输入房屋面积">
+
+            </p>
+
+            <p class="ecvv">
+
+              <input type="text" class="inputt" placeholder="请输入小区名称">
+
+            </p>
+
+            <p class="bffb">
+
+              <input type="button" class="vddv" value="立即提交">
+
+            </p>
+
+          </div>
+ -->
+        </div>
+
+      </div>
+
+      <!-- 设计师介绍部分结束 -->
+
+      <!-- 他的作品开始 -->
+
+      <div class="tade">
+          <h3>相关作品</h3>
+        
+
+      </div>
+
+   
+
+      <!-- 中间图片开始 -->
+
+      <div class="cuns clearfix">
+
+
+      {volist name="room2" id="vo"}
+        <div class="cuns-1">
+
+          <div class="tutua">
+
+            <a href="/home/describes/id/{$vo['id']}"><img src="/public/uploads/{$vo['pic']}" alt="" width="300px"></a>
+
+          </div>
+
+          <!-- <div class="wxsss">
+
+            <p>{$vo['name']}</p>
+
+            <p>{$vo['describe']}</p>
+
+          </div>
+ -->
+          
+
+        </div>
+{/volist}
+ 
+          
+
+    
+
+      </div>
+
+      <!-- 中间图片结束 -->
+
+    </div>
+
+      <!-- 底部开始 -->
+
+      {:widget("Cate/footer")}
+
+      <!-- 底部结束 -->
+
+      <!-- 返回顶部开始 -->
+
+      <div class="box" id="box">
+
+        <div class="return"><a href="index.html">返回首页</a></div>
+
+        <div class="back" id="back"></div>
+
+      </div>
+
+      <!-- 返回顶部结束 -->
+
+      <script src="/public/static/home/js/common.js"></script>
+
+      <script src="/public/static/home/js/opiys.js"></script>
+
+    </body>
+
+</html>

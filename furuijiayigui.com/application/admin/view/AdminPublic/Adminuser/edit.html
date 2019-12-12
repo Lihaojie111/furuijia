@@ -1,0 +1,44 @@
+{extend name="AdminPublic:pub"}
+{block name="right"}
+<html>
+ <head>
+  <style>
+    #sel{width:150px;font-size:17px;}
+  </style>
+
+ </head>
+ <body>
+  <div class="pd-20"> 
+   <div class="Huiform"> 
+    <form action="/AdminUser/update" method="post"> 
+     <table class="table table-bg"> 
+        <input type="hidden" name="id" value="{$data['id']}">
+      <tbody> 
+       <tr> 
+        <th width="100" class="text-r"><span class="c-red">*</span> 用户名：</th> 
+        <td><input type="text" style="width:300px" class="input-text" value="{$data['user']}" placeholder="请输入用户名" id="user-name" name="user" datatype="*2-16" nullmsg="用户名不能为空" /></td> 
+       </tr> 
+       <tr> 
+        <th width="100" class="text-r"><span class="c-red">*</span> 密码：</th> 
+        <td><input type="password" style="width:300px" class="input-text" value="{$data['password']}" placeholder="请输入密码" id="user-name" name="password" datatype="*2-16" nullmsg="用户名不能为空" /></td> 
+       </tr> 
+       
+	
+
+       <tr> 
+        <th></th> 
+        <td><button class="btn btn-success radius" type="submit"><i class="icon-ok"></i>修改</button></td> 
+       </tr> 
+      </tbody> 
+     </table> 
+    </form> 
+   </div> 
+  </div> 
+  
+   
+ </body>
+</html>
+
+
+
+{/block}

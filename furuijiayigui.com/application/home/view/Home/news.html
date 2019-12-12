@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<title>新闻资讯</title>
+
+	 <meta name="description" content="芙瑞伽衣柜" />
+
+        <meta name="keywords" content="芙瑞伽衣柜" />
+
+	<link rel="stylesheet" href="/public/static/home/css/reset.css">
+
+	<link rel="stylesheet" href="/public/static/home/css/common.css">
+
+	<link rel="stylesheet" href="/public/static/home/css/xiangmu5.css">
+
+</head>
+
+<body>
+
+<!-- 头部start -->
+
+	{:widget("Cate/header")}
+
+	<!-- 头部end -->
+
+	<div class="banner">
+
+		<img src="/public/static/home/images/banner-2.png" alt="">
+
+	</div>
+
+	<div class="new">
+
+		<div class="new-top">
+
+			<h3>新闻资讯</h3>
+
+			<p>当前位置: <a href="index.html">首页></a><span>新闻资讯</span></p>
+
+		</div>
+
+		<div class="news">
+
+			
+
+			{foreach name="news" item="new"}	
+
+			<div>
+
+				<a href="/home/newlook/id/{$new['id']}"><img src="/public/uploads/{$new['pic']}"></a>
+
+				<div>
+
+					<h4><a href="/home/newlook/id/{$new['id']}">{$new['title']}</h4></a>
+
+					<p>
+
+								{$new['content'] |strip_tags|mb_substr=0,180,'utf-8'}...
+
+						<a href="/home/newlook/id/{$new['id']}">[查看详情]</a>
+
+					</p>
+
+					<div style="position: absolute;bottom:5px;">{$new['time']} 
+
+						<!-- <a href="###" class="a1"><i class="spr"></i>131</a>
+
+						<a href="###" class="a2"><i class="spr1"></i>98</a> -->
+
+					</div>
+
+				</div>       				
+
+			</div>
+
+			
+
+				{/foreach}
+
+		
+
+				</div>
+
+			</div>
+
+		</div>
+	
+		<div class="but">
+			{$news->render()}
+		<!-- 	<a class="inp" href="###">首页</a>
+
+			<a class="inp" href="###">上一页</a>
+
+			<a href="">1</a>
+
+			<a class="two" href="###">2</a>
+
+			<a href="###">3</a>
+
+			<a href="###">4</a>
+
+			<a href="###">5</a>
+
+			<a href="###">...</a>
+
+			<a href="###">23</a>
+
+			<a class="inp" href="###">下一页</a>
+
+			到第<input type="text" class="texts">页
+
+			<a class="two last" href="###">GO</a> -->
+
+		</div>
+
+	</div>
+
+    	<!-- 底部开始 -->
+
+		{:widget("Cate/footer")}
+
+
+
+	<!-- 底部结束 -->
+
+	<!-- 返回顶部开始 -->
+
+	<div class="box" id="box">
+
+		<div class="return"><a href="index.html">返回首页</a></div>
+
+		<div class="back" id="back"></div>
+
+	</div>
+
+	<!-- 返回顶部结束 -->
+
+	<script src="/public/static/home/js/common.js"></script>
+
+</body>
+
+</html>

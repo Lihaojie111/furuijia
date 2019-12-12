@@ -1,0 +1,42 @@
+{extend name="AdminPublic:pub"}
+
+{block name="right"}
+<div class="pd-20">
+  <div class="Huiform">
+    <form action="/user/updates" method="post" enctype="multipart/form-data">
+      <input type="hidden" name="id" value="{$data['id']}">
+      
+      <table class="table table-bg">
+        <tbody>
+           <tr>
+            <th width="100" class="text-r"><span class="c-red">*</span> 用户名：</th>
+            <td><input type="text" style="width:300px" class="input-text"
+            value="{$data['name']}" id="user-name" name="name" datatype="*2-16" nullmsg="用户名不能为空"></td>
+          </tr>
+            <tr>
+            <th width="100" class="text-r"><span class="c-red">*</span> 密码：</th>
+            <td><input type="password" style="width:300px" class="input-text"
+            value="{$data['password']}" id="user-name" name="password" datatype="*2-16" nullmsg=""></td>
+          </tr>
+
+         <!--  <tr>
+            <th width="100" class="text-r"><span class="c-red">*</span> 修改状态：</th> 
+              <td>
+     
+           
+               <input type="radio" value="2" name="state" {$data['state']==2?'checked':''} />会员禁用
+
+            </td> 
+           </tr>
+          <tr> -->
+            <th></th>
+            <td><button class="btn btn-success radius" type="submit"><i class="icon-ok"></i>修改</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </div>
+</div>
+
+
+{/block}

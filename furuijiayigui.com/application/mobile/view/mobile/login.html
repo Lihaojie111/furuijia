@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+		<head>
+	
+		<meta charset="utf-8">
+	
+		<title>登录</title>
+	
+		<meta name="description" content="芙瑞伽衣柜" />
+	
+		<meta name="keywords" content="芙瑞伽衣柜" />
+		<!-- 
+	    <link rel="stylesheet" href="/public/static/home/css/reset.css">
+	
+	    <link rel="stylesheet" href="/public/static/home/css/common.css"> -->
+	
+		<link rel="stylesheet" href="/public/static/mobile/css/login.css">
+		
+		<script src="/public/static/mobile/js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+		.hfirst_1{
+			width:40%;
+			height: 120px;
+			text-align: center;
+			
+		}
+		.hfirst_1 img{
+			width: 90%;
+			height: 100%;
+			
+		}
+		.hfirst{
+			display: flex;
+			justify-content: space-between;
+		}
+		.hfirst_2{
+			text-align: center;
+		}
+		.hfirst_2 img{
+			width: 80px;
+			height: 80px;
+			margin-top: 30px;
+			margin-right: 40px;
+		}
+		.hzone{
+			position: relative;
+			background-color: white;
+		}
+		.hsecond{
+			z-index: 999;
+			position: absolute;
+			top: 97%;
+			right: 0%;
+			font-size: 38px;
+			width: 18%;
+			text-align: center;
+			border: 1px solid gray;
+			background-color: white;
+		}
+		.hsecond div{
+			margin: 28px 8px;
+			
+		}
+		a{
+			text-decoration : none;
+			color: black;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="hzone">
+			<div class="hfirst">
+				<div class="hfirst_1">
+					<img src="/public/static/mobile/img/login.png" >
+				</div>
+				<div class="hfirst_2">
+					<img src="/public/static/mobile/img/mulu111.png" >
+				</div>
+			</div>
+			<div class="hsecond">
+			<div><a href="/mobile/index">首页</a></div>
+
+			
+				<div><a href="/mobile/profile/id/8">关于我们</a></div>
+			
+			
+				<div><a href="/mobile/news/id/9">新闻资讯</a></div>
+
+			
+				<div><a href="/mobile/classify/id/10">产品分类</a></div>
+		
+		
+				<div><a href="/mobile/exhibition/id/11">案列展示</a></div>
+			
+			
+				<div><a href="/mobile/zhaoshang/id/12">招商加盟</a></div>
+			
+			
+				<div><a href="/mobile/login">芙瑞伽商学院</a></div>
+			</div>
+		</div>
+		<div class="zone">
+		<div class="first">
+			<div class="first_1">芙瑞伽商学院</div>
+			<div class="first_2">
+				<img class="first_2_1" src="/public/static/mobile/img/zhanghao.png" alt="">
+				<input type="" name="" id="" value="" placeholder="请输入账户" />
+			</div>
+			<div class="first_2">
+				<img class="first_2_1" src="/public/static/mobile/img/mima.png" alt="">
+				<input type="" name="" id="" value="" placeholder="请输入密码" />
+			</div>
+			<div class="first_3">
+				登录
+			</div>
+		</div>
+		</div>
+	</body>
+		<script type="text/javascript">
+		$(".hsecond").hide();
+		$(".hfirst_2").on("click",function(){
+			$(".hsecond").toggle();
+		})
+		
+	</script>
+</html>
